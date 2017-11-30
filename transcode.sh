@@ -6,7 +6,7 @@ SUPPORTED_VIDEO_FORMAT='x264 h264 x265 hevc'
 DEFAULT_AUDIO_LIB='libfdk_aac'
 SUPPORTED_AUDIO_FORMAT='aac ac3'
 DEFAULT_SUB_LIB='mov_text'
-SUPPORTED_SUB_FORMAT='mov_text'
+SUPPORTED_SUB_FORMAT='mov_text tx3g ttxt text'
 
 DEFAULT_OUT_BASE_PATH="$HOME/Documents/ConvertedFiles"
 FFMPEG_PATH="$HOME/Documents/ffmpeg"
