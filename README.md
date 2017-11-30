@@ -6,9 +6,9 @@ The aim of this script is to provide a simple way to transcode audio/video files
 transcode [ in out ] [ -l in [ in [...]]
 ## Description
 This script transcode audio/video file(s) with ffmpeg into files compliant with ${OUTFILE_EXTENSION} type:
-- If the video codecs of in file(s) is not one of ${SUPPORTED_VIDEO_FORMAT}, the output video codec will be transcoded with ${DEFAULT_VIDEO_LIB} lib
-- If the audio codecs of in file(s) is not one of ${SUPPORTED_AUDIO_FORMAT}, the output audio codec will be transcoded with ${DEFAULT_AUDIO_LIB} lib
-- If the subtitles codecs of in file(s) is not one of ${SUPPORTED_SUB_FORMAT}, the output subtitle codec will be transcoded with ${DEFAULT_SUB_LIB} lib
+- If the video codecs of in file(s) is not one of ${SUPPORTED_VIDEO_FORMAT}, the output video will be transcoded with ${DEFAULT_VIDEO_LIB} lib
+- If the audio codecs of in file(s) is not one of ${SUPPORTED_AUDIO_FORMAT}, the output audio will be transcoded with ${DEFAULT_AUDIO_LIB} lib
+- If the subtitles codecs of in file(s) is not one of ${SUPPORTED_SUB_FORMAT}, the output subtitle will be transcoded with ${DEFAULT_SUB_LIB} lib
 ## Parameters
 	transcode in out: Transcode in file
 		in : Path to the file to transcode
