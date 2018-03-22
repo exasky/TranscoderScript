@@ -101,12 +101,6 @@ transcodeFile() {
 
     local parameters=$(getParameters "$infile")
     ${FFMPEG_PATH} -i "${infile}" ${parameters} "${DEFAULT_OUT_BASE_PATH}/$outfile" 2> "$log_file"
-    #${FFMPEG_PATH} -i "$infile" -c copy -c:s mov_text -map 0 "${DEFAULT_OUT_BASE_PATH}/$outfile" 2> "$log_file" #copy all streams and convert subtitles to be mp4 compliant (hyper fast)
-    #${FFMPEG_PATH} -i "$infile" -c:v libx264 -c:a copy "${DEFAULT_OUT_BASE_PATH}/$outfile" 2> "$log_file" #DEFAULT x264 CONVERSION with audio copy
-    #${FFMPEG_PATH} -i "$infile" -c:v libx264 -c:a libfdk_aac "${DEFAULT_OUT_BASE_PATH}/$outfile" 2> "$log_file" #DEFAULT x264 CONVERSION with aac audio
-    #${FFMPEG_PATH} -i "$infile" -c:v libx265 -tag:v hvc1 -c:a libfdk_aac "${DEFAULT_OUT_BASE_PATH}/$outfile" 2> "$log_file" #HEVC (x265) CONVERSION. FourCC FLAG: hvc1
-    #${FFMPEG_PATH} -i "$infile" -c:v libx265 -c:a libfdk_aac "${DEFAULT_OUT_BASE_PATH}/$outfile" 2> "$log_file" #DEFAULT HEVC (x265) CONVERSION with aac audio
-    #Apple tv doesn't play  AAC 5.1 without convert (--mixdown 6ch option)
     if [ $? -ne 0 ]; then
         echo "Error with file $infile, please check $log_file"
         return 1
